@@ -27,6 +27,6 @@ app.get("/players/", async (request, response) => {
     FROM
     cricket_team
     `;
-  const mainC = await dbConnect.get(qweryis);
+  const mainC = await dbConnect.all(qweryis);
   response.send(mainC);
 });
